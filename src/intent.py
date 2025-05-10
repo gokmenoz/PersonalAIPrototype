@@ -5,7 +5,7 @@ session = boto3.Session(profile_name="ogokmen_bedrock")
 bedrock = session.client("bedrock-runtime", region_name="us-east-1")
 
 MODEL_ID = "amazon.nova-lite-v1:0"
-CATEGORIES = ["travel", "ai", "sports", "concerts", "news"]
+CATEGORIES = ["travel", "ai", "sports", "events", "news"]
 
 FEW_SHOT_EXAMPLES = [
     ("I’m planning a trip to Italy, what should I see?", "travel"),

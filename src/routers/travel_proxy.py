@@ -1,7 +1,6 @@
 import os
 import requests
-
-TRAVEL_API_URL = os.getenv("TRAVEL_API_URL", "http://localhost:8001/chat")
+from src.constants import TRAVEL_API_URL
 
 def handle_travel(query: str) -> str:
     try:
