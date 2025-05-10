@@ -2,11 +2,11 @@
 
 import streamlit as st
 from intent import detect_category_nova
-from routers.travel_proxy import handle_travel  # abstracted API call
+from routers.travel_proxy import handle_travel
 from routers.events_proxy import handle_events
 from routers.news_proxy import handle_news
 from routers.sports_proxy import handle_sports
-from routers.ai_proxy import handle_ai
+# from routers.ai_proxy import handle_ai
 
 st.set_page_config(page_title="🤖 Smart Chatbot", layout="centered")
 st.title("💬 Personal AI Assistant")
@@ -30,5 +30,24 @@ if st.button("Submit"):
                 result = handle_travel(query)
                 st.success("🌍 TravelBot says:")
                 st.write(result)
+
+        elif intent == "events":
+            with st.spinner("Checking local events..."):
+                result = handle_events(query)
+                st.success("🎫 EventsBot found:")
+                st.write(result)
+
+        elif intent == "news":
+            with st.spinner("Fetching latest news..."):
+                result = handle_news(query)
+                st.success("📰 Here's the news:")
+                st.write(result)
+
+        elif intent == "sports":
+            with st.spinner("Checking sports updates..."):
+                result = handle_sports(query)
+                st.success("🏅 SportsBot reports:")
+                st.write(result)
+
         else:
-            st.info("⚙️ This question isn't travel-related. Future support coming!")
+            st.info("⚙️ This intent is not supported yet. Try asking about travel or events.")
