@@ -1,5 +1,5 @@
 import requests
-from constants import NEWS_API_URL
+from src.constants import NEWS_API_URL
 
 def handle_news(query: str) -> str:
     try:
