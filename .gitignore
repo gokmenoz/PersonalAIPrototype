@@ -1,0 +1,21 @@
+# Python virtual environments
+personalAI/
+venv/
+env/
+.env/
+
+# Python build files
+*.egg-info/
+dist/
+build/
+__pycache__/
+*.pyc
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables
+.env 
