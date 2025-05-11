@@ -52,6 +52,10 @@ pip install -e .
 
 1. Start the Streamlit app:
 ```bash
+# Option 1: Run with PYTHONPATH set to include src directory
+PYTHONPATH=src streamlit run src/app.py
+
+# Option 2: Run directly (if package is installed in editable mode)
 streamlit run src/app.py
 ```
 

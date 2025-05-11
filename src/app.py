@@ -1,12 +1,14 @@
 # app.py
 
 import streamlit as st
-from src.intent import detect_category_nova
-from src.routers.travel_proxy import handle_travel
-from src.routers.events_proxy import handle_events
-from src.routers.news_proxy import handle_news
-from src.routers.sports_proxy import handle_sports
-# from src.routers.ai_proxy import handle_ai
+import pandas as pd
+import numpy as np
+from intent import detect_category_nova
+from routers.travel_proxy import handle_travel
+from routers.events_proxy import handle_events
+from routers.news_proxy import handle_news
+from routers.sports_proxy import handle_sports
+# from routers.ai_proxy import handle_ai
 
 st.set_page_config(page_title="🤖 EasyChat", layout="centered")
 st.title("💬 Your Personal AI Assistant")
